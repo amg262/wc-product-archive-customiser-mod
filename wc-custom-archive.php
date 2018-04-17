@@ -26,12 +26,12 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	/**
 	 * PAC class
 	 */
-	if ( ! class_exists( 'WC_pacm' ) ) {
+	if ( ! class_exists( 'WC_Custom_Archive' ) ) {
 
 		/**
 		 * The Product Archive Customiser class
 		 */
-		final class WC_pacm {
+		final class WC_Custom_Archive {
 
 			/**
 			 * The version number.
@@ -207,7 +207,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			 * @return void
 			 */
 			public function wc_pac_customize_register( $wp_customize ) {
-				$wp_customize->add_section( 'WC_pacm', [
+				$wp_customize->add_section( 'WC_Custom_Archive', [
 					'title'    => __( 'Product Archives', 'woocommerce-product-archive-customiser' ),
 					'priority' => 30,
 				] );
@@ -223,7 +223,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_columns', [
 					'label'    => __( 'Product columns', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_columns',
 					'type'     => 'select',
 					'choices'  => [
@@ -245,7 +245,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_products_per_page', [
 					'label'    => __( 'Products per page', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_products_per_page',
 					'type'     => 'select',
 					'choices'  => [
@@ -297,6 +297,56 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						'47' => '47',
 						'48' => '48',
 						'49' => '49',
+						'50' => '50',
+						'51' => '51',
+						'52' => '52',
+						'53' => '53',
+						'54' => '54',
+						'55' => '55',
+						'56' => '56',
+						'57' => '57',
+						'58' => '58',
+						'59' => '59',
+						'60' => '60',
+						'61' => '61',
+						'62' => '62',
+						'63' => '63',
+						'64' => '64',
+						'65' => '65',
+						'66' => '66',
+						'67' => '67',
+						'68' => '68',
+						'69' => '69',
+						'70' => '70',
+						'71' => '71',
+						'72' => '72',
+						'73' => '73',
+						'74' => '74',
+						'75' => '75',
+						'76' => '76',
+						'77' => '77',
+						'78' => '78',
+						'79' => '79',
+						'80' => '80',
+						'81' => '81',
+						'82' => '82',
+						'83' => '83',
+						'84' => '84',
+						'85' => '85',
+						'86' => '86',
+						'87' => '87',
+						'88' => '88',
+						'89' => '89',
+						'90' => '90',
+						'91' => '91',
+						'92' => '92',
+						'93' => '93',
+						'94' => '94',
+						'95' => '95',
+						'96' => '96',
+						'97' => '97',
+						'98' => '98',
+						'99' => '99',
 					],
 				] ) );
 
@@ -311,7 +361,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_product_count', [
 					'label'    => __( 'Display product count', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_product_count',
 					'type'     => 'checkbox',
 				] ) );
@@ -327,7 +377,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_product_sorting', [
 					'label'    => __( 'Display product sorting', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_product_sorting',
 					'type'     => 'checkbox',
 				] ) );
@@ -343,7 +393,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_sale_flash', [
 					'label'    => __( 'Display sale flashes', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_sale_flash',
 					'type'     => 'checkbox',
 				] ) );
@@ -359,7 +409,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_add_to_cart', [
 					'label'    => __( 'Display add to cart buttons', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_add_to_cart',
 					'type'     => 'checkbox',
 				] ) );
@@ -375,7 +425,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_thumbnail', [
 					'label'    => __( 'Display product image', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_thumbnail',
 					'type'     => 'checkbox',
 				] ) );
@@ -391,7 +441,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_price', [
 					'label'    => __( 'Display prices', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_price',
 					'type'     => 'checkbox',
 				] ) );
@@ -407,7 +457,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_rating', [
 					'label'    => __( 'Display ratings', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_rating',
 					'type'     => 'checkbox',
 				] ) );
@@ -423,7 +473,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_new_badge', [
 					'label'    => __( 'Display new badge', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_new_badge',
 					'type'     => 'checkbox',
 				] ) );
@@ -439,7 +489,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_newness', [
 					'label'           => __( 'Display the "New" badge for how many days', 'woocommerce-product-archive-customiser' ),
-					'section'         => 'WC_pacm',
+					'section'         => 'WC_Custom_Archive',
 					'settings'        => 'wc_pac_newness',
 					'type'            => 'select',
 					'choices'         => [
@@ -462,7 +512,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_categories', [
 					'label'    => __( 'Display categories', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_categories',
 					'type'     => 'checkbox',
 				] ) );
@@ -478,7 +528,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wc_pac_stock', [
 					'label'    => __( 'Display stock', 'woocommerce-product-archive-customiser' ),
-					'section'  => 'WC_pacm',
+					'section'  => 'WC_Custom_Archive',
 					'settings' => 'wc_pac_stock',
 					'type'     => 'checkbox',
 				] ) );
@@ -755,6 +805,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			}
 		}
 
-		$wc_pac = new WC_pacm();
+		$wc_pac = new WC_Custom_Archive();
 	}
 }
